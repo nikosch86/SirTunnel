@@ -1,13 +1,11 @@
-version: "3.9"
-
 volumes:
   caddy_data:
 
 services:
   caddy:
-    image: caddy:2-alpine
+    image: caddy:2.7-alpine
     restart: unless-stopped
     network_mode: host
     volumes:
       - caddy_data:/data
-      - ./caddy_config.json:/config/caddy_config.json
+      - ./Caddyfile:/etc/caddy/Caddyfile

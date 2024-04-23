@@ -76,7 +76,7 @@ body = json.dumps(caddy_add_route_request).encode('utf-8')
 headers = {
     'Content-Type': 'application/json'
 }
-create_url = 'http://127.0.0.1:2019/config/apps/http/servers/sirtunnel/routes'
+create_url = 'http://127.0.0.1:2019/config/apps/http/servers/srv0/routes'
 try:
     req = request.Request(method='POST', url=create_url, headers=headers)
     request.urlopen(req, body)
